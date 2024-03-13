@@ -1,0 +1,40 @@
+---
+import NavigationCard from "./Navigation-card.astro";
+---
+
+<section class="navigation">
+  <div>
+    <a href="/#">LOGO Spotify</a>
+    <a href="/#">IKON Hjem</a>
+    <a href="/#">IKON Søg</a>
+  </div>
+
+  <div>
+    <section class="flex-row">
+      <img src="" alt="" />
+      <h3>Dit bibliotek</h3>
+      <img src="" alt="" />
+    </section>
+    <NavigationCard
+      title="Opret din første playliste"
+      text="Det er nemt - vi skal nok hjælpe dig"
+    />
+    <NavigationCard
+      title="Lad os finde nogle podcasts, du kan følge"
+      text="V holder dig orienteret om nye episoder"
+    />
+  </div>
+</section>
+
+<style>
+  * {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  div {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 7px;
+  }
+</style>

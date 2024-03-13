@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+body {
+    background-color: black;
+    display: flex;
+    gap: 7px;
+    margin: 7px;
+}
+main {
+    width: 80%;
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 7px;
+}
+.navigation {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4, p, a {
+    color: white;
+    text-decoration: none;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}

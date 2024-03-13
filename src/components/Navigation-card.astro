@@ -1,0 +1,19 @@
+---
+import Button from "./Button.astro";
+const { title, text } = Astro.props;
+---
+
+<div>
+  <h3>{title}</h3>
+  <p>{text}</p>
+  <Button buttonText="Opret playliste" />
+</div>
+
+<style>
+  div {
+    background-color: #242424;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+</style>
