@@ -6,11 +6,12 @@ const { buttonText } = Astro.props;
 
 <style>
   button {
-    margin-top: 20px;
+    margin-top: var(--spacing-medium);
     width: 125px;
-    padding: 8px;
+    padding: var(--spacing-small);
+    border: none;
     border-radius: 100px;
-    color: #242424;
+    color: var(--grey);
     font-weight: bold;
   }
 </style>

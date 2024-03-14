@@ -1,20 +1,30 @@
 ---
+import "../styles/style.css";
 import NavigationCard from "./Navigation-card.astro";
 ---
 
 <section class="navigation">
-  <div>
-    <a href="/#">LOGO Spotify</a>
-    <a href="/#">IKON Hjem</a>
-    <a href="/#">IKON Søg</a>
-  </div>
+  <nav>
+    <a href="/#">
+      <img src="../../public/logo.svg" alt="Spotify logo med tekst" />
+    </a>
+    <a class="flex-row flex-align-center" href="/#">
+      <img src="../../public/home-filled.svg" alt="Hjem ikon, af et hus" />Hjem
+    </a>
+    <a class="flex-row flex-align-center" href="/#">
+      <img src="../../public/search-icon.svg" alt="Søge ikon, af en loop" /> Søg
+    </a>
+  </nav>
 
   <div>
-    <section class="flex-row">
-      <img src="" alt="" />
+    <section class="flex-row icon-section">
+      <img
+        src="../../public/library-icon-filled.svg"
+        alt="Biblioteksikon, af bøger"
+      />
       <h3>Dit bibliotek</h3>
-      <img src="" alt="" />
     </section>
+
     <NavigationCard
       title="Opret din første playliste"
       text="Det er nemt - vi skal nok hjælpe dig"
@@ -27,14 +37,42 @@ import NavigationCard from "./Navigation-card.astro";
 </section>
 
 <style>
-  * {
+  .navigation {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: var(--spacing-small);
   }
-  div {
-    background-color: #121212;
+
+  div,
+  nav {
+    background-color: var(--dark-grey);
     border-radius: 8px;
-    padding: 7px;
+    padding: var(--spacing-small);
+  }
+
+  nav {
+    padding: var(--spacing-large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+
+    & img {
+      padding-right: var(--spacing-medium);
+    }
+  }
+
+  .icon-section {
+    padding: var(--spacing-small) var(--spacing-large) var(--spacing-large)
+      var(--spacing-large);
+
+    opacity: 0.5;
+
+    & img {
+      padding-right: var(--spacing-small);
+    }
+  }
+
+  img {
+    height: 25px;
   }
 </style>
